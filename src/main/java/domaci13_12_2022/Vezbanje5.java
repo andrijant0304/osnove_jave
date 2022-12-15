@@ -32,3 +32,8 @@ public class Vezbanje5 {
     }
 
 }
+
+
+//5.	 (Za vezbanje) Napisati program koji stampa dijagram kao sa slike.
+
+

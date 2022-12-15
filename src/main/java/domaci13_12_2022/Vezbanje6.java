@@ -30,3 +30,6 @@ public class Vezbanje6 {
     }
 
 }
+
+
+//6.	(Za vezbanje)Napisati program koji iscrtava formu za registraciju kao sa slike.

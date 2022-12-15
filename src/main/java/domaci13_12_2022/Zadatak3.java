@@ -14,3 +14,7 @@ public class Zadatak3 {
 
     }
 }
+
+
+//3.	Napisati program koji racuna Z prema formuli: (X - Y) NA KVADRAT.
+//        X i Y su celi brojevi.
