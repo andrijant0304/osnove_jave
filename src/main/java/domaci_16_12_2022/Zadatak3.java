@@ -1,4 +1,4 @@
-package Domaci_16_12_2022;
+package domaci_16_12_2022;
 
 public class Zadatak3 {
 
