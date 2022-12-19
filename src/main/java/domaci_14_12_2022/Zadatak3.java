@@ -9,24 +9,28 @@ public class Zadatak3 {
         Scanner s = new Scanner(System.in);
 
         System.out.print("Unesite x za T1: ");
-        int t1xAxis = s.nextInt();
+        int x1 = s.nextInt();
 
         System.out.print("Unesite y za T1: ");
-        int t1yAxis = s.nextInt();
+        int y1 = s.nextInt();
 
         System.out.print("Unesite x za T2: ");
-        int t2xAxis = s.nextInt();
+        int x2 = s.nextInt();
 
         System.out.print("Unesite y za T2: ");
-        int t2yAxis = s.nextInt();
+        int y2 = s.nextInt();
 
         System.out.print("Unesite x za M: ");
-        int mXAxis = s.nextInt();
+        int x3 = s.nextInt();
 
         System.out.print("Unesite y za M: ");
-        int mYAxis = s.nextInt();
+        int y3 = s.nextInt();
 
-
+        if ( (x3 > x1 && x3 < x2) || (y3 > y1 || y3 <y2)){
+            System.out.println("Kliknuto je unutar forme");
+        } else {
+            System.out.println("Nije kliknuto je unutar forme");
+        }
 
 
     }
