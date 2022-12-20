@@ -1,4 +1,4 @@
-package Vezbanje_14_12_2022;
+package vezbanje_14_12_2022;
 
 import java.util.Scanner;
 
