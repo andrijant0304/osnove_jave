@@ -1,3 +1,5 @@
+package p_20_12_2022;
+
 import java.util.Scanner;
 
 public class p_20_12_2022_while_loop {
