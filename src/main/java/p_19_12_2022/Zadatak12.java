@@ -13,8 +13,9 @@ public class Zadatak12 {
         int points = 0;
 
         for (int i = 0; i < n; i++) {
-            System.out.println("Unesite password: ");
+            System.out.print("Unesite password: ");
             String pass = s.next();
+            points = 0;
 
             if (pass.length() > 8){
                 points++;
@@ -23,13 +24,14 @@ public class Zadatak12 {
                 points++;
             }
 
-            System.out.print("Password ima " + points + " poena");
-//            points = 0;
+            System.out.println("Password ima " + points + " poena");
+//
         }
     }
 }
 
-//    Napisati program prikazuje koliko je svaki od unetih passworda jak. Korisnik unosi N passworda i za svaki se ispisuje jacina.
+//    Napisati program prikazuje koliko je svaki od unetih passworda jak.
+//    Korisnik unosi N passworda i za svaki se ispisuje jacina.
 //Svaki uslov koji password ispunjava dodaje po 1 poen:
 //duzina veca od 8
 //sadrzi @ specijalan karakter

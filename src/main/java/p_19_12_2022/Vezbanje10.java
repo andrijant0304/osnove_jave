@@ -13,12 +13,12 @@ public class Vezbanje10 {
 
         int sum;
 
+        System.out.print("Novi broj je: ");
+
         for (int i = 0; i < 5; i++) {
 
             sum = num % 10;
             num = num / 10;
-
-
 
             System.out.print(sum);
         }

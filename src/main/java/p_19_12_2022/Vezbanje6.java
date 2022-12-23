@@ -21,7 +21,6 @@ public class Vezbanje6 {
             sum = sum * 10;
             sum = sum + num;
 
-
         }
         System.out.print("Rezultujuci broj je " + sum);
 

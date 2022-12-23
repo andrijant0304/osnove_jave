@@ -18,8 +18,6 @@ public class Vezbanje9 {
             sum = num % 10;
             num = num / 10;
 
-
-
             System.out.print(sum + ", ");
         }
     }
