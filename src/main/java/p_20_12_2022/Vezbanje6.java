@@ -1,8 +1,15 @@
 package p_20_12_2022;
 
+import java.util.Scanner;
+
 public class Vezbanje6 {
 
     public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Unesite broj: ");
+        int x = s.nextInt();
 
 
 

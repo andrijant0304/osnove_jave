@@ -8,15 +8,13 @@ public class Zadatak1 {
 
         Scanner s = new Scanner(System.in);
 
-        int x = 0;
-
-
+        System.out.print("Unesite broj: ");
+        int x = s.nextInt();
 
         while (x < 10 || x > 50){
+            System.out.println("Greska: Broj nije u opsegu od 10 do 50.");
             System.out.print("Unesite broj: ");
             x = s.nextInt();
-
-            System.out.println("Greska: Broj nije u opsegu od 10 do 50.");
 
         }
         System.out.print("Broj je validan, kraj programa");

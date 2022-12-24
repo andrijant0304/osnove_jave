@@ -1,11 +1,27 @@
 package p_20_12_2022;
 
+import java.util.Scanner;
+
 public class Zadatak7 {
 
     public static void main(String[] args) {
 
+        Scanner s = new Scanner(System.in);
 
+        int sum = 0;
 
+        System.out.print("Unesite vrednost: ");
+        int x = s.nextInt();
+
+        while (sum + x <= 100){
+            sum = sum + x;
+
+            System.out.print("Unesite vrednost: ");
+            x = s.nextInt();
+
+        }
+
+        System.out.println("Prekoracenje! Kraj programa. Sracunata suma je " + sum + ".");
     }
 }
 

@@ -1,15 +1,45 @@
 package p_20_12_2022;
 
+import java.util.Scanner;
+
 public class Vezbanje5 {
 
     public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+
+        int volume = 75;
+
+        System.out.print("Unesite akciju: ");
+        String action = s.next();
+
+        while (!action.contains("play")){
+
+            if (action.contains("pojacaj")){
+                volume = volume + 10;
+            }
+            if (action.contains("smanji")) {
+                volume = volume - 10;
+            }
+            System.out.print("Unesite akciju: ");
+            action = s.next();
+        }
+
+        if (volume < 0){
+            volume = 0;
+        }
+        if (volume > 100){
+            volume = 100;
+        }
+
+        System.out.println("Jacina zvuka je " + volume + ".");
 
 
 
     }
 }
 
-//(za vezbanje) Napisati pogram koji vrsi korkeciju zvuka.
+//(za vezbanje) Napisati program koji vrsi korkeciju zvuka.
 //        Korisnik unosi akcije “pojacaj” ili “smanji” ili “play”.
 //        Program radi dok korisnik ne unese play. Inicijalna jacina zvuka je 75.
 //        Pojacaj - akcije koja povecava jacinu zvuka za 10

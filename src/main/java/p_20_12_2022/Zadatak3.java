@@ -1,10 +1,33 @@
 package p_20_12_2022;
 
+import java.util.Scanner;
+
 public class Zadatak3 {
 
     public static void main(String[] args) {
 
+        Scanner s = new Scanner(System.in);
 
+        int counter1 = 0;
+        int counter2 = 0;
+        int counter3 = 0;
+        int counter4 = 0;
+
+        while (counter1 == 0 || counter2 == 0 || counter3 == 0 || counter4 == 0) {
+            System.out.print("Unesite broj: ");
+            int x = s.nextInt();
+
+            if (x == 1) {
+                counter1++;
+            } else if (x == 2) {
+                counter2++;
+            } else if (x == 3) {
+                counter3++;
+            } else if (x == 4) {
+                counter4++;
+            }
+        }
+        System.out.println("Kraj programa");
 
     }
 }
