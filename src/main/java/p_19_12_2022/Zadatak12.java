@@ -10,12 +10,11 @@ public class Zadatak12 {
 
         System.out.print("Unesite N: ");
         int n = s.nextInt();
-        int points = 0;
 
         for (int i = 0; i < n; i++) {
+            int points = 0;
             System.out.print("Unesite password: ");
             String pass = s.next();
-            points = 0;
 
             if (pass.length() > 8){
                 points++;
@@ -25,7 +24,7 @@ public class Zadatak12 {
             }
 
             System.out.println("Password ima " + points + " poena");
-//
+            // points = 0;
         }
     }
 }

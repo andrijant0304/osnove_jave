@@ -16,7 +16,10 @@ public class Zadatak11 {
         for (int i = 0; i < pass.length(); i++) {
             System.out.print("*");
         }
-
-
     }
 }
+
+//11.	Napisati program koji sakriva uneti password..
+//        Primer izvrsenja:
+//        Unestite password: OvoJePassword123
+//        Skriverni password: ****************
