@@ -11,8 +11,15 @@ public class Vezbanje6 {
         System.out.print("Unesite broj: ");
         int x = s.nextInt();
 
+        int modul;
 
+        while (x > 0){
 
+            modul = x % 10;
+            x = x / 10;
+
+            System.out.print(modul + ", ");
+        }
     }
 }
 
