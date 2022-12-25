@@ -1,10 +1,39 @@
 package domaci_21_12_2022;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Vezbanje5 {
 
     public static void main(String[] args) {
 
+        Scanner s = new Scanner(System.in);
 
+        ArrayList<Integer> a = new ArrayList<>();
+        ArrayList<Integer> b = new ArrayList<>();
+
+        System.out.print("Unesite N: ");
+        int n = s.nextInt();
+
+        int d = 1;
+
+        for (int i = 0; i < n; i++) {
+            System.out.print("Unesite broj: ");
+            int num = s.nextInt();
+            a.add(num);
+
+        }
+        System.out.println("Niz A: " + a);
+
+        for (int i = 0; i < a.size(); i++) {
+            if (i < 3){
+                int c = a.get(i);
+                b.add(c);
+            } else {
+                b.add(d);
+            }
+        }
+        System.out.println("Niz B: " + b);
 
     }
 }
