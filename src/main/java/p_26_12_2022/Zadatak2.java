@@ -12,10 +12,12 @@ public class Zadatak2 {
     }
 
     public static void printName() {
+
         System.out.print("Andrija");
     }
 
     public static void printLastName() {
+
         System.out.print("Antic");
     }
 

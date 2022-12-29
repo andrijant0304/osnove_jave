@@ -14,7 +14,7 @@ public class Zadatak5 {
     public static void absolute(int a) {
 
         if (a < 0){
-            System.out.println("Absolutna vrednost od a je " + a * -1);
+            System.out.println("Absolutna vrednost od a je " + -a);     //   a * -1 = -a
         }else {
             System.out.println("Absolutna vrednost od a je " + a);
         }

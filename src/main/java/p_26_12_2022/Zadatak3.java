@@ -18,6 +18,7 @@ public class Zadatak3 {
     }
 
     public static void stars(){
+
         System.out.print("*  ");
     }
 }

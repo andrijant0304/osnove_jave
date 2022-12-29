@@ -11,16 +11,10 @@ public class Zadatak7 {
         System.out.print("Unesite N: ");
         int n = s.nextInt();
 
-        System.out.println(m);
+        System.out.println();
     }
 
-    public static int reverse(int n) {
-        if (){
 
-        }
-
-            return m;
-    }
 
 
 }

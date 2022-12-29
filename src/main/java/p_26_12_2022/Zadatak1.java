@@ -5,12 +5,12 @@ public class Zadatak1 {
     public static void main(String[] args) {
 
         for (int i = 0; i < 5; i++) {
-            print();
+            printCao();
         }
 
     }
 
-    public static void print() {
+    public static void printCao() {
         System.out.println("Andrija Antic");
     }
 }

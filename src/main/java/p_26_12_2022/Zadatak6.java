@@ -12,6 +12,7 @@ public class Zadatak6 {
         int n = s.nextInt();
 
         printStars(n);
+        System.out.println();
     }
 
     public static void printStars(int n) {
@@ -19,7 +20,7 @@ public class Zadatak6 {
         for (int i = 0; i < n; i++) {
             System.out.print("*");
         }
-        System.out.println();
+
     }
 }
 
