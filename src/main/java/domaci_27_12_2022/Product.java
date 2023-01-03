@@ -6,22 +6,22 @@ public class Product {
     public double price;
     public double weight;
 
-    public void print() {
-        System.out.println("{{" + this.name + "}}" + "{{" + this.price + "}}" + "{{" + this.weight + "}}");
-        System.out.println();
+    double weightConverted;
 
-    }
-
-    public double converter(String unit, double weight){
+    public double converter(String unit){
         if(unit.equals("kg")){
-            return (double) (this.weight * 0.0001);
+            return (this.weight * 0.001);
         } else if(unit.equals("t")){
-            return (double) (this.weight / 0.0000001);
+            return (this.weight * 0.000001);
         } else {
             return 0;
         }
     }
+    public void print() {
+        System.out.println("{{" + this.name + "}}, " + "{{" + this.price + "}}, " + "{{" + this.weightConverted + "}}");
+        System.out.println();
 
+    }
 
 }
 

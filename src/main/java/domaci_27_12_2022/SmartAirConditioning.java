@@ -6,13 +6,21 @@ public class SmartAirConditioning {
     int airConTemp;
     String modeHeat;
     String modeCool;
+    int outsideTemp;
+
+    String workingMode;
 
 
-    public String getAirConTemp(int airConTemp, int outsideTemp) {
-        if (airConTemp > outsideTemp){
-            return modeHeat;
+    public String getAirConTemp(int outsideTemp) {
+        if (this.airConTemp < outsideTemp){
+            return "veca";
         }
-        return modeCool;
+        return "manja";
+    }
+
+    public  void print(int outsideTemp){
+        System.out.println("Spoljna temperatura " + outsideTemp + " je " + this.workingMode
+                + " od temperature " + this.airConTemp + " na koju je klima " +  this.brand + " podesena.");
     }
 
 

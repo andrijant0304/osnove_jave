@@ -16,7 +16,8 @@ public class Zadatak2 {
         inverter.airConTemp = 22;
         inverter.modeHeat = "greje";
         inverter.modeCool = "hladi";
-
+        inverter.workingMode = inverter.getAirConTemp(outsideTemp);
+        inverter.print(outsideTemp);
 
 
         SmartAirConditioning standard = new SmartAirConditioning();
@@ -24,6 +25,8 @@ public class Zadatak2 {
         standard.airConTemp = 25;
         standard.modeHeat = "greje";
         standard.modeCool = "hladi";
+        standard.workingMode = standard.getAirConTemp(outsideTemp);
+        standard.print(outsideTemp);
 
     }
 
