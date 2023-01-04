@@ -10,10 +10,10 @@ public class Zadatak3 {
         bmw.brojVrata = 4;
         bmw.potrosnja = 10;
         bmw.trenutnaBrzina = 200;
-        bmw.ogranicenje = 130;
+//        bmw.ogranicenje = 130;
         bmw.godinaProizvodnje = 1998;
         bmw.mesecRegistracije = 11;
-        bmw.trenutniMesec = 10;
+//        bmw.trenutniMesec = 10;
         bmw.kubikaza = 2000;
 
         bmw.stampa();
@@ -24,27 +24,27 @@ public class Zadatak3 {
 
 
 
-        if(bmw.prekoracenje(bmw.ogranicenje)){
+        if(bmw.prekoracenje(50)){
             System.out.println("Brzina je prekoracena!");
-            System.out.println("Kazna je: " + bmw.kazna(bmw.trenutnaBrzina, bmw.ogranicenje) + " dinara.");
+            System.out.println("Kazna je: " + bmw.kazna(bmw.trenutnaBrzina) + " dinara.");
         }else{
             System.out.println("Brzina nije prekoracena.");
         }
 
 
-        if(bmw.oldtimer(bmw.godinaProizvodnje)){
+        if(bmw.oldtimer()){
             System.out.println("Auto je oldtimer.");
         } else {
             System.out.println("Auto nije oldtimer.");
         }
 
-        if (bmw.registracija(bmw.mesecRegistracije, bmw.trenutniMesec)){
+        if (bmw.registracija(10)){
             System.out.println("Auto je registrovan.");
         } else {
             System.out.println("Registacija je istekla!");
         }
 
-        System.out.println("Cena registracije je: " + bmw.izracunajCenuRegistracije(bmw.kubikaza));
+        System.out.println("Cena registracije je: " + bmw.izracunajCenuRegistracije());
     }
 }
 

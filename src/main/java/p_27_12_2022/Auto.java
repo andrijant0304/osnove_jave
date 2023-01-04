@@ -7,12 +7,12 @@ public class Auto {
     public  int brojVrata;
     public  int potrosnja;
     public  int trenutnaBrzina;
-    public int ogranicenje;
+//    public int ogranicenje;
     public int godinaProizvodnje;
     public int mesecRegistracije;
-    public int trenutniMesec;
+//    public int trenutniMesec;
     public int kubikaza;
-    public int cenaRegistracije;
+//    public int cenaRegistracije;
 
 
 
@@ -29,10 +29,12 @@ public class Auto {
             return true;
         }
         return  false;
+
+//        return this.trenutnaBrzina > ogranicenje;
     }
 
-    public int kazna(int trenutnaBrzina, int ogranicenje) {
-        if (trenutnaBrzina > ogranicenje) {
+    public int kazna(int ogranicenje) {
+        if (this.trenutnaBrzina > ogranicenje) {
             int kazna = (trenutnaBrzina - ogranicenje) * 1000;
             return kazna;
         } else {
@@ -41,29 +43,29 @@ public class Auto {
 
     }
 
-    public  boolean oldtimer(int godinaProizvodnje){
-        if (godinaProizvodnje < 1950){
+    public  boolean oldtimer(){
+        if (this.godinaProizvodnje < 1950){
             return true;
         }
         return false;
     }
 
-    public  boolean registracija(int mesecRegistracije, int trenutniMesec){
-        if (trenutniMesec < mesecRegistracije){
+    public  boolean registracija(int trenutniMesec){
+        if (trenutniMesec < this.mesecRegistracije){
             return true;
         }
         return false;
     }
 
-    public  int izracunajCenuRegistracije(int kubikaza){
-        if(kubikaza <= 2000 ){
-            int cenaRegistracije = kubikaza * 100;
+    public  int izracunajCenuRegistracije(){
+        int cenaRegistracije = kubikaza * 100;
+        if(kubikaza > 2000 ) {
+            cenaRegistracije = cenaRegistracije * 130 / 100;
+        }
             return cenaRegistracije;
-        } else {
-            return  cenaRegistracije = kubikaza * 130;
 
         }
-    }
+
 }
 
 //●	metodu koja vraca da li je auto oldtimer, svaki auto proizveden pre 1950 je oldtimer.
