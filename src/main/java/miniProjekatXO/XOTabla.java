@@ -16,7 +16,6 @@ public class XOTabla {
     private String imeX;
     private String imeO;
     private String naPotezu;
-//    private int brojPolja;
     private int potez;
 
     private ArrayList<String> tabla = new ArrayList<>();
@@ -24,6 +23,7 @@ public class XOTabla {
     public String getImeX() {
         return imeX;
     }
+
     public void setImeX(String imeX) {
         this.imeX = imeX;
     }
@@ -31,6 +31,7 @@ public class XOTabla {
     public String getImeO() {
         return imeO;
     }
+
     public void setImeO(String imeO) {
         this.imeO = imeO;
     }
@@ -39,133 +40,115 @@ public class XOTabla {
         return naPotezu;
     }
 
-//    public void setBrojPolja(int brojPolja){
-//        this.brojPolja = brojPolja;
-//    }
-//    public int getBrojPolja() {
-//        return brojPolja;
-//    }
-//
-//    public int getPotez() {
-//        return potez;
-//    }
-
     public void setPotez(int potez) {
         this.potez = potez;
     }
 
-    public void pokreniIgru(){
-        this.polje1 = " ";
-        this.polje2 = " ";
-        this.polje3 = " ";
-        this.polje4 = " ";
-        this.polje5 = " ";
-        this.polje6 = " ";
-        this.polje7 = " ";
-        this.polje8 = " ";
-        this.polje9 = " ";
-        tabla.add(this.polje1);
-        tabla.add(this.polje2);
-        tabla.add(this.polje3);
-        tabla.add(this.polje4);
-        tabla.add(this.polje5);
-        tabla.add(this.polje6);
-        tabla.add(this.polje7);
-        tabla.add(this.polje8);
-        tabla.add(this.polje9);
+    public void pokreniIgru() {
+
+        tabla.add(this.polje1 = " ");
+        tabla.add(this.polje2 = " ");
+        tabla.add(this.polje3 = " ");
+        tabla.add(this.polje4 = " ");
+        tabla.add(this.polje5 = " ");
+        tabla.add(this.polje6 = " ");
+        tabla.add(this.polje7 = " ");
+        tabla.add(this.polje8 = " ");
+        tabla.add(this.polje9 = " ");
 
         this.naPotezu = "X";
     }
 
-    public void stampaj(){
+    public void stampaj() {
         System.out.println(this.polje1 + " | " + this.polje2 + " | " + this.polje3 + "\n" +
-                           this.polje4 + " | " + this.polje5 + " | " + this.polje6 + "\n" +
-                           this.polje7 + " | " + this.polje8 + " | " + this.polje9 + "\n" +
-                            "Igrac X: " + this.imeX + "\n" +
-                            "Igrac O: " + this.imeO + "\n" +
-                            "Na potezu je igrac " + this.naPotezu );
+                this.polje4 + " | " + this.polje5 + " | " + this.polje6 + "\n" +
+                this.polje7 + " | " + this.polje8 + " | " + this.polje9 + "\n" +
+                "Igrac X: " + this.imeX + "\n" +
+                "Igrac O: " + this.imeO + "\n" +
+                "Na potezu je igrac " + this.naPotezu);
     }
 
-    public boolean poljePrazno(){
-       if(tabla.get(potez-1).equals(" ")){
+    public boolean poljePrazno() {
+        if (tabla.get(potez - 1).equals(" ")) {
             return true;
-        } return false;
+        }
+        return false;
     }
 
-    public void zameniIgraca(){
-        if(this.naPotezu.equals("X")){
+    public void zameniIgraca() {
+        if (this.naPotezu.equals("X")) {
             this.naPotezu = "O";
-        } else{
+        } else {
             this.naPotezu = "X";
         }
     }
 
-    public void odigrajPotez(){
+    public void odigrajPotez() {
 
-        if(potez == 1){
+        if (potez == 1) {
             this.polje1 = getNaPotezu();
             tabla.set(0, getNaPotezu());
         }
-        if(potez == 2){
+        if (potez == 2) {
             this.polje2 = getNaPotezu();
             tabla.set(1, getNaPotezu());
         }
-        if(potez == 3){
+        if (potez == 3) {
             this.polje3 = getNaPotezu();
             tabla.set(2, getNaPotezu());
         }
-        if(potez == 4){
+        if (potez == 4) {
             this.polje4 = getNaPotezu();
             tabla.set(3, getNaPotezu());
         }
-        if(potez == 5){
+        if (potez == 5) {
             this.polje5 = getNaPotezu();
             tabla.set(4, getNaPotezu());
         }
-        if(potez == 6){
+        if (potez == 6) {
             this.polje6 = getNaPotezu();
             tabla.set(5, getNaPotezu());
         }
-        if(potez == 7){
+        if (potez == 7) {
             this.polje7 = getNaPotezu();
             tabla.set(6, getNaPotezu());
         }
-        if(potez == 8){
+        if (potez == 8) {
             this.polje8 = getNaPotezu();
             tabla.set(7, getNaPotezu());
         }
-        if(potez == 9){
+        if (potez == 9) {
             this.polje9 = getNaPotezu();
             tabla.set(8, getNaPotezu());
         }
-
     }
 
-    public boolean popunjenaTabla(){
-        for (int i = 0; i < tabla.size()-1; i++) {
-            tabla.get(i).equals(" ");
-            return false;
+    public boolean popunjenaTabla() {
+        for (int i = 0; i < tabla.size() - 1; i++) {
+            if (tabla.get(i).equals(" ")) {
+                return false;
+            }
         }
         return true;
     }
 
-    public boolean pobednikX(){
-        if(tabla.get(0).equals("X") && tabla.get(1).equals("X") && tabla.get(2).equals("X") ||
-           tabla.get(3).equals("X") && tabla.get(4).equals("X") && tabla.get(5).equals("X") ||
-           tabla.get(6).equals("X") && tabla.get(7).equals("X") && tabla.get(8).equals("X") ||
-           tabla.get(0).equals("X") && tabla.get(3).equals("X") && tabla.get(6).equals("X") ||
-           tabla.get(1).equals("X") && tabla.get(4).equals("X") && tabla.get(7).equals("X") ||
-           tabla.get(2).equals("X") && tabla.get(5).equals("X") && tabla.get(8).equals("X") ||
-           tabla.get(0).equals("X") && tabla.get(4).equals("X") && tabla.get(8).equals("X") ||
-           tabla.get(2).equals("X") && tabla.get(4).equals("X") && tabla.get(6).equals("X")) {
+    public boolean pobednikX() {
+        if (tabla.get(0).equals("X") && tabla.get(1).equals("X") && tabla.get(2).equals("X") ||
+                tabla.get(3).equals("X") && tabla.get(4).equals("X") && tabla.get(5).equals("X") ||
+                tabla.get(6).equals("X") && tabla.get(7).equals("X") && tabla.get(8).equals("X") ||
+                tabla.get(0).equals("X") && tabla.get(3).equals("X") && tabla.get(6).equals("X") ||
+                tabla.get(1).equals("X") && tabla.get(4).equals("X") && tabla.get(7).equals("X") ||
+                tabla.get(2).equals("X") && tabla.get(5).equals("X") && tabla.get(8).equals("X") ||
+                tabla.get(0).equals("X") && tabla.get(4).equals("X") && tabla.get(8).equals("X") ||
+                tabla.get(2).equals("X") && tabla.get(4).equals("X") && tabla.get(6).equals("X")) {
             return true;
         } else {
             return false;
         }
     }
 
-    public boolean pobednikO(){
-        if(tabla.get(0).equals("O") && tabla.get(1).equals("O") && tabla.get(2).equals("O") ||
+    public boolean pobednikO() {
+        if (tabla.get(0).equals("O") && tabla.get(1).equals("O") && tabla.get(2).equals("O") ||
                 tabla.get(3).equals("O") && tabla.get(4).equals("O") && tabla.get(5).equals("O") ||
                 tabla.get(6).equals("O") && tabla.get(7).equals("O") && tabla.get(8).equals("O") ||
                 tabla.get(0).equals("O") && tabla.get(3).equals("O") && tabla.get(6).equals("O") ||
@@ -178,7 +161,6 @@ public class XOTabla {
             return false;
         }
     }
-
 }
 
 //XO - Mini Projekat
