@@ -4,8 +4,30 @@ public class Zadatak2 {
 
     public static void main(String[] args) {
 
-        Proizvod p = new Proizvod("cokolada", 150);
+        Proizvod p = new Proizvod("cokolada", 200);
+        Kupac k = new Kupac("Andrija Antic");
+        ClanskaKarta ck = new ClanskaKarta(5,"1234-5678");
 
+        p.setMusterija(k);
+        p.setClanKarta(ck);
+        ck.setClan(k);
+        k.setKartica(ck);
+
+
+        Proizvod p2 = new Proizvod("cipele", 6000);
+        Kupac k2 = new Kupac("John Smith");
+        ClanskaKarta ck2 = new ClanskaKarta(8,"9894-1218");
+
+        p2.setMusterija(k2);
+        p2.setClanKarta(ck2);
+        ck2.setClan(k2);
+        k2.setKartica(ck2);
+
+
+        p.stampajProizvod();
+
+        p2.stampajProizvod();
+//        k.stampajKupca();
 
 
     }

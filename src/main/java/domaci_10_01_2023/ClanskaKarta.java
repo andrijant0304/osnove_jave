@@ -5,11 +5,16 @@ public class ClanskaKarta {
     private int popust;
     private  String brojKartice;
 
+    private Kupac clan;
+
+// constructors
     public ClanskaKarta(int popust, String brojKartice) {
         this.popust = popust;
         this.brojKartice = brojKartice;
     }
+// constructors END
 
+// getters and setters
     public int getPopust() {
         return popust;
     }
@@ -22,15 +27,18 @@ public class ClanskaKarta {
         return brojKartice;
     }
 
+    public Kupac getClan() {
+        return clan;
+    }
+
+    public void setClan(Kupac clan) {
+        this.clan = clan;
+    }
+
     public void setBrojKartice(String brojKartice) {
         this.brojKartice = brojKartice;
     }
-
-    //Kreirati klasu ClanskaKarta koja ima:
-//●	popust (u rasponu od 5 do 10 %)
-//●	broj kartice (npr: 9329-0239)
-//●	gettere i setter
-//●	konstuktore
+// getters and setters END
 
 }
 

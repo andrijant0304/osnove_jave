@@ -5,11 +5,14 @@ public class Kupac {
     private String imeIPrezime;
     private ClanskaKarta kartica;
 
+//constructors
     public Kupac(String imeIPrezime) {
         this.imeIPrezime = imeIPrezime;
 
     }
+// constructors END
 
+// getters and setters
     public String getImeIPrezime() {
         return imeIPrezime;
     }
@@ -25,13 +28,13 @@ public class Kupac {
     public void setKartica(ClanskaKarta kartica) {
         this.kartica = kartica;
     }
+// getters and setters END
 
-    //●	metodu stampaj koja stampa u formatu
-//ime i prezime - broj kartice
-
+// METHODS
     public void stampajKupca(){
-        System.out.println("Kupac: " + this.imeIPrezime + " - broj kartice: " + this.kartica );
+        System.out.println("Kupac: " + this.imeIPrezime + " - broj kartice: " + this.kartica.getBrojKartice() );
     }
+//METHODS END
 }
 
 //Zadatak (POGLEDAJ SLIKU)

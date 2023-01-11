@@ -5,12 +5,16 @@ public class Proizvod {
     private String naziv;
     private Kupac musterija;
     private double cenaIzrade;
+    private ClanskaKarta clanKarta;
 
+//constructors
     public Proizvod(String naziv, double cenaIzrade) {
         this.naziv = naziv;
         this.cenaIzrade = cenaIzrade;
     }
+//constructors END
 
+// getters and setters
     public String getNaziv() {
         return naziv;
     }
@@ -23,7 +27,7 @@ public class Proizvod {
         return musterija;
     }
 
-    public void setMusterija(Kupac musterija) {
+    public void setMusterija() {
         this.musterija = musterija;
     }
 
@@ -35,14 +39,30 @@ public class Proizvod {
         this.cenaIzrade = cenaIzrade;
     }
 
+    public void setMusterija(Kupac musterija) {
+        this.musterija = musterija;
+    }
+
+    public ClanskaKarta getClanKarta() {
+        return clanKarta;
+    }
+
+    public void setClanKarta(ClanskaKarta clanKarta) {
+        this.clanKarta = clanKarta;
+    }
+// getters and setters END
+
+// METHODS
     public  double cenaProizvoda(){
-        return this.cenaIzrade * 1.9 * (100) / 100;
+        return this.cenaIzrade * 1.9 * (100 - this.clanKarta.getPopust()) / 100;
     }
 
     public void stampajProizvod(){
         System.out.println("Proizvod: " + this.naziv + " - " + this.cenaProizvoda());
-        System.out.println("Kupac: ");  //ime i prezime - broj kartice
+        System.out.println("Kupac: " + this.musterija.getImeIPrezime() + " - broj kartice: " + this.clanKarta.getBrojKartice());
+        System.out.println();
     }
+// METHODS END
 }
 
 //Zadatak (POGLEDAJ SLIKU)
