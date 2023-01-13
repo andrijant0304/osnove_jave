@@ -5,11 +5,15 @@ public class Zadatak3 {
     public static void main(String[] args) {
 
         Film f = new Film("Blabla", 2025);
-        Reziser r = new Reziser("John Smith", 2000);
+        Reziser r = new Reziser("John Smith",
+                2000);
 
 
-        f.print();
-        r.print();
+        r.setReziraoJe(f);
+
+        f.stampaj();
+        System.out.println();
+        r.stampaj();
     }
 }
 

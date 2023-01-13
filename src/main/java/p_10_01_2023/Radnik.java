@@ -8,7 +8,7 @@ public class Radnik {
     private int stepenStrucneSpr;
     private int godRadnogStaza;
 
-    public Radnik(String jmbg){   // setuje se samo jednom kroz ocakav konstruktor
+    public Radnik(String jmbg){   // setuje se samo jednom kroz ovakav konstruktor
         this.jmbg = jmbg;
     }
 

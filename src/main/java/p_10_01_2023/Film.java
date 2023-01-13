@@ -2,32 +2,32 @@ package p_10_01_2023;
 
 public class Film {
 
-    private String name;
-    private int year;
+    private String naziv;
+    private int godina;
 
-    public Film(String name, int year) {
-        this.name = name;
-        this.year = year;
+    public Film(String naziv, int godina) {
+        this.naziv = naziv;
+        this.godina = godina;
     }
 
-    public String getName() {
-        return name;
+    public String getNaziv() {
+        return naziv;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNaziv(String naziv) {
+        this.naziv = naziv;
     }
 
-    public int getYear() {
-        return year;
+    public int getGodina() {
+        return godina;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public void setGodina(int godina) {
+        this.godina = godina;
     }
 
-    public void print(){
-        System.out.println(this.name + ", " + this.year);
+    public void stampaj(){
+        System.out.println(this.naziv + ", " + this.godina);
     }
 }
 

@@ -14,6 +14,11 @@ public class User {
         this.ime = ime;
         this.prezime = prezime;
     }
+    public User(String ime, String prezime, String  email) {
+        this.ime = ime;
+        this.prezime = prezime;
+        this.email = email;
+    }
 
     public String getIme() {
         return ime;

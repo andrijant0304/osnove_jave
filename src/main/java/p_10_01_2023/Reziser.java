@@ -5,29 +5,46 @@ public class Reziser {
     private  String imeIPrezime;
     private int starost;
 
+    private Film reziraoJe;
+
     public Reziser(String imeIPrezime, int starost) {
         this.imeIPrezime = imeIPrezime;
         this.starost = starost;
     }
 
-    public String getImeIPrezime() {
-        return imeIPrezime;
+//    public String getImeIPrezime() {
+//        return imeIPrezime;
+//    }
+
+//    public void setImeIPrezime(String imeIPrezime) {
+//        this.imeIPrezime = imeIPrezime;
+//    }
+
+//    public int getStarost() {
+//        return starost;
+//    }
+
+//    public void setStarost(int starost) {
+//        this.starost = starost;
+//    }
+
+//    public Film getReziraoJe() {
+//        return reziraoJe;
+//    }
+
+    public void setReziraoJe(Film reziraoJe) {
+        this.reziraoJe = reziraoJe;
     }
 
-    public void setImeIPrezime(String imeIPrezime) {
-        this.imeIPrezime = imeIPrezime;
-    }
-
-    public int getStarost() {
-        return starost;
-    }
-
-    public void setStarost(int starost) {
-        this.starost = starost;
-    }
-
-    public void print(){
-        System.out.println(this.imeIPrezime + ", " + this.starost);
+    public void stampaj(){
+        System.out.println("Ime i prezime:  " + this.imeIPrezime);
+        System.out.println("Starost: " + this.starost);
+        if(this.reziraoJe != null){
+            System.out.println("Rezirao je: " + this.reziraoJe.getNaziv());
+            System.out.println("Godine: " + this.reziraoJe.getGodina());
+        } else {
+            System.out.println("Nije rezirao ni jedan film");
+        }
     }
 }
 
