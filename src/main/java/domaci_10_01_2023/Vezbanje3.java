@@ -1,8 +1,20 @@
 package domaci_10_01_2023;
 
+import java.util.Scanner;
+
 public class Vezbanje3 {
 
     public static void main(String[] args) {
+
+        ProizvodV p = new ProizvodV(123, "Cokolada", 1500);
+
+        Vaga v = new Vaga();
+
+        v.setMernaJed("kg");
+
+        v.setProizvod(p);
+
+        v.stampajRacun();
 
     }
 }
@@ -26,7 +38,9 @@ public class Vezbanje3 {
 //-	TEZINA SE NE CUVA KAO ATRIBUT!!!!!!!!!
 //-	default-ni konstuktor
 //-	getteri i setteri za sve atribute
-//-	metodu sracunajCenu koja vraca cenu proizvoda za unetu tezinu (tezina je parametar funkcije). Na racunanje cene utice i merna jedinica na koju je vaga podesena.
+//-	metodu sracunajCenu koja vraca cenu proizvoda za unetu tezinu (tezina je parametar funkcije).
+//
+// Na racunanje cene utice i merna jedinica na koju je vaga podesena.
 //-	metodu stampaj koja stampa racun u formatu. POMOC: trebace vam tezina kao parametar u ovoj metodi
 //               (sifra) - (naziv)
 //   (cena za odgovarajucu mernu jedinicu) (merna jedinica) x (tezina)

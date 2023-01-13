@@ -2,6 +2,54 @@ package domaci_10_01_2023;
 
 public class Vaga {
 
+    private String mernaJed;
+    private ProizvodV proizvod;
+
+//constructors
+
+    public Vaga() {
+    }
+
+//getters and setters
+
+    public String getMernaJed() {
+        return mernaJed;
+    }
+
+    public void setMernaJed(String mernaJed) {
+        this.mernaJed = mernaJed;
+    }
+
+    public ProizvodV getProizvod() {
+        return proizvod;
+    }
+
+    public void setProizvod(ProizvodV proizvod) {
+        this.proizvod = proizvod;
+    }
+
+//METHODS
+    public double sracunajCenu(double tezina){
+        if(this.mernaJed.equals("kg"))
+            return this.proizvod.getCenaKg() * tezina;
+        if(this.mernaJed.equals("lb"))
+            return this.proizvod.getCenaLb() * tezina;
+        return 0;
+    }
+
+    public void stampajRacun(){
+        this.proizvod.stampa();
+            if (this.mernaJed.equals("kg")){
+                System.out.println("Cena: " + this.proizvod.getCenaKg() + " za " + this.mernaJed);
+                System.out.println("Ukupno: ");
+            } else if(this.mernaJed.equals("lb")){
+                System.out.println("Cena: " + this.proizvod.getCenaLb() + " za " + this.mernaJed);
+                System.out.println("Ukupno: ");
+            } else {
+                System.out.println("Pogresno uneta merna jedinica!");
+            }
+    }
+
 }
 
 //3. (Za vezbanje) Kreirati klasu Proizvod koja ima:
